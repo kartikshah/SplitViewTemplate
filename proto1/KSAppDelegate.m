@@ -27,10 +27,10 @@
 
 
         //TODO - Move this inside Delegate
-        //if(!_currentDetailController)
-        //{
+        if(!_currentDetailController)
+        {
             _currentDetailController = (UINavigationController*)[splitViewController.storyboard instantiateViewControllerWithIdentifier:@"HOME"];
-        //}
+        }
         
         _ksSplitViewDetailDelegate = [[KSSplitViewDetailDelegate alloc] initWithSplitViewController:splitViewController AndViewControllers: [NSArray arrayWithObjects:ksMasterViewController.navigationController, _currentDetailController, nil]];
 
